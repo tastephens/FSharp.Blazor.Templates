@@ -3,7 +3,7 @@ ignore:
   sha: []
 merge-message-formats: {}
 mode: ContinuousDeployment
-next-version: 1
+next-version: 1.0.1
 branches:
   master:
     mode: ContinuousDeployment
