@@ -7,7 +7,7 @@
     <Authors>Kristoffer Löfberg</Authors>
     <Description>Templates to use when creating an F# Blazor application.</Description>
     <PackageTags>dotnet-new;templates;blazor</PackageTags>
-
+    <IsPackabe>true</IsPackabe>
     <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IncludeContentInPack>true</IncludeContentInPack>
