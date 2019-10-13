@@ -26,7 +26,7 @@ type FetchData() =
     override this.Render () = [
         h1 [] [ text "Weather forecast" ]
         p [] [ text "This component demonstrates fetching data from a service." ]
-        match forecasts with
+        cond forecasts <| function
             | None ->
                 p [] [ em [] [ text "Loading..." ] ]
             | Some forecasts' ->
@@ -39,14 +39,14 @@ type FetchData() =
                             th [] [ text "Summary" ]
                         ]
                     ]
-                    tbody []
-                        (forecasts'
-                        |> List.map (fun forecast ->
+                    tbody [] [
+                        forEach forecasts' <| fun forecast ->
                             tr [] [
                                 td [] [ forecast.Date.ToShortDateString() |> text ]
                                 td [] [ forecast.TemperatureC.ToString() |> text ]
                                 td [] [ forecast.TemperatureF.ToString() |> text ]
                                 td [] [ text forecast.Summary ]
-                            ]))
+                            ]
+                    ]
                 ]
     ]
