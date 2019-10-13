@@ -1,0 +1,11 @@
+branches: {}
+ignore:
+  sha: []
+merge-message-formats: {}
+mode: ContinuousDeployment
+next-version: 1
+branches:
+  master:
+    mode: ContinuousDeployment
+    tag: 'Preview'
+  
