@@ -23,7 +23,7 @@ type FetchData() =
             return ()
         } |> Async.StartAsTask :> Task
 
-    override this.Render () = [
+    override this.Render () = concat [
         h1 [] [ text "Weather forecast" ]
         p [] [ text "This component demonstrates fetching data from a service." ]
         cond forecasts <| function

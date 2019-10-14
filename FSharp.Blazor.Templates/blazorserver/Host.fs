@@ -13,7 +13,7 @@ type Host() =
     [<Inject>]
     member val HttpContextAccessor : IHttpContextAccessor = null with get, set
 
-    override this.Render () = [
+    override this.Render () =
         html [ attr.lang "en" ] [
             head [] [
                 meta [ attr.charset "utf-8" ]
@@ -27,4 +27,3 @@ type Host() =
                 script [ attr.src "_framework/blazor.server.js" ] []
             ]
         ]
-    ]

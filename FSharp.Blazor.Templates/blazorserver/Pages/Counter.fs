@@ -12,7 +12,7 @@ type Counter() =
 
     let incrementCount _ = currentCount <- currentCount + 1
 
-    override this.Render () = [
+    override this.Render () = concat [
         h1 [] [ text "Counter" ]
         p [] [ sprintf "Current count: %i" currentCount |> text ]
         button [ attr.``class`` "btn btn-primary"; on.click incrementCount ] [ text "Click me" ]

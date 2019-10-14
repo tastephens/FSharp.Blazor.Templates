@@ -9,7 +9,7 @@ open FSharp.Blazor.Template.Shared
 type App() =
     inherit Component()
 
-    override this.Render() = [
+    override this.Render() =
         comp<Router> [
             appAssembly<App>
             found (fun rd ->
@@ -19,4 +19,3 @@ type App() =
                     p [] [ text "Sorry, there's nothing at this address." ]
                 ])
         ] []
-    ]

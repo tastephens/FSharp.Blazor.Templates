@@ -8,7 +8,7 @@ open FSharp.Blazor.Html
 type Index() =
     inherit Component()
 
-    override this.Render () = [
+    override this.Render () = concat [
         h1 [] [ text "Hello, world!" ]
         text "Welcome to your new app."
     ]

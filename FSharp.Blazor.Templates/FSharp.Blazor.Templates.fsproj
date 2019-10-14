@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="**\*" Exclude="**\bin\**;**\obj\**;FSharp.Blazor.Templates.fsproj" />
+    <Content Include="**\*" Exclude="**\bin\**;**\obj\**;FSharp.Blazor.Templates.fsproj;NuGet.Config" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
